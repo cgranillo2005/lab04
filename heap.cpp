@@ -6,7 +6,7 @@
 using std::cout;
 
 // Helper function that gives us heap property
-void hepifyDown(std::vector<int>& v, int i) {
+void heapifyDown(std::vector<int>& v, int i) {
   int minIndex = i;
   int left = 2 * i + 1;
   int right = 2 * i + 2;
@@ -58,7 +58,7 @@ void Heap::pop(){
 // Returns the minimum element in the heap
 int Heap::top(){
   if (vdata.empty()) {
-    throw std::out_of_range("Heap is empty")
+    throw std::out_of_range("Heap is empty");
   }
   return vdata[0];
 }
